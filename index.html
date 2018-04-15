@@ -306,6 +306,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/CSS3学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SongJun Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/15/CSS3学习笔记/" itemprop="url">
+                  CSS3 学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+                
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-15T15:06:26+08:00">2018-04-15</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端开发/" itemprop="url" rel="index"><span itemprop="name">前端开发</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="弹性盒子"><a href="#弹性盒子" class="headerlink" title="弹性盒子"></a>弹性盒子</h1><p>弹性盒子由弹性容器(Flex container)和弹性子元素(Flex item)组成。<br>弹性容器通过设置 display 属性的值为 flex 或 inline-flex将其定义为弹性容器。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">.flex-container &#123;</span></span><br><span class="line"><span class="undefined">    display: flex;</span></span><br><span class="line"><span class="undefined">    /*display: -webkit-flex;*/</span></span><br><span class="line"><span class="undefined">    width: 400px;</span></span><br><span class="line"><span class="undefined">    height: 250px;</span></span><br><span class="line"><span class="undefined">    background-color: lightgrey;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"> </span></span><br><span class="line"><span class="undefined">.flex-item &#123;</span></span><br><span class="line"><span class="undefined">    background-color: cornflowerblue;</span></span><br><span class="line"><span class="undefined">    width: 100px;</span></span><br><span class="line"><span class="undefined">    height: 100px;</span></span><br><span class="line"><span class="undefined">    margin: 10px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flex-container"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flex-item"</span>&gt;</span>flex item 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flex-item"</span>&gt;</span>flex item 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flex-item"</span>&gt;</span>flex item 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="flex-direction-指定了弹性子元素在父容器中的排列"><a href="#flex-direction-指定了弹性子元素在父容器中的排列" class="headerlink" title="flex-direction: 指定了弹性子元素在父容器中的排列"></a><strong>flex-direction:</strong> 指定了弹性子元素在父容器中的排列</h4><ul>
+<li><strong>row：横向从左到右排列(默认)。</strong></li>
+<li><strong>row-reverse：反转横向排列</strong></li>
+<li><strong>column：纵向排列</strong></li>
+<li><strong>column-reverse：反转纵向排列</strong><h4 id="justify-content-内容对齐-应用在弹性容器上"><a href="#justify-content-内容对齐-应用在弹性容器上" class="headerlink" title="justify-content: 内容对齐(应用在弹性容器上)"></a><strong>justify-content:</strong> 内容对齐(应用在弹性容器上)</h4></li>
+<li><strong>flex-start：弹性项目向行头紧挨着填充(默认)。</strong></li>
+<li><strong>flex-end：弹性项目向行尾紧挨着填充。</strong></li>
+<li><strong>center：弹性项目居中紧挨着填充。</strong></li>
+<li><strong>space-between：弹性项目平均分布在该行上。</strong></li>
+<li><strong>space-around：弹性项目平均分布在该行上，两边留有一半的间隔空间。</strong><h4 id="align-items-设置子元素在侧轴（纵轴）方向上的对齐方式"><a href="#align-items-设置子元素在侧轴（纵轴）方向上的对齐方式" class="headerlink" title="align-items: 设置子元素在侧轴（纵轴）方向上的对齐方式"></a><strong>align-items:</strong> 设置子元素在侧轴（纵轴）方向上的对齐方式</h4><code>align-items: flex-start | flex-end | center | baseline | stretch</code><h4 id="flex-wrap-指定子元素换行方式"><a href="#flex-wrap-指定子元素换行方式" class="headerlink" title="flex-wrap: 指定子元素换行方式"></a><strong>flex-wrap:</strong> 指定子元素换行方式</h4></li>
+<li><strong>nowrap: 默认， 弹性容器为单行。该情况下弹性子项可能会溢出容器。</strong></li>
+<li><strong>wrap - 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行</strong></li>
+<li><strong>wrap-reverse -反转 wrap 排列。</strong></li>
+</ul>
+<h1 id="多媒体查询"><a href="#多媒体查询" class="headerlink" title="多媒体查询"></a>多媒体查询</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> not|only mediatype and (expressions) &#123;</span><br><span class="line">    <span class="selector-tag">CSS</span> 代码...;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/logback输出json格式日志/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -355,6 +520,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/后端开发/" itemprop="url" rel="index"><span itemprop="name">后端开发</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -491,6 +674,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -750,14 +951,52 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">categories</span>
+                  
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">tags</span>
+                  
+                </div>
               
             </nav>
           
